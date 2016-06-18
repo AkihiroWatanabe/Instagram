@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ImageSelectViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AdobeUXImageEditorViewControllerDelegate {
 
     @IBAction func handleLibraryButton(sender: AnyObject) {
@@ -19,6 +21,9 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
             pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             presentViewController(pickerController, animated: true, completion: nil)
         }
+
+
+        
     }
     
     @IBAction func handleCameraButton(sender: AnyObject) {

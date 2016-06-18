@@ -46,8 +46,19 @@ class CommentViewController: UIViewController {
         // HUDで投稿完了を表示する
         SVProgressHUD.showSuccessWithStatus("投稿しました")
         commentTextView.text = ""
+        
 
     }
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+
+        super.viewWillDisappear(animated)
+        print("うぃるでぃすあぴあー")
+        
+            
+        }
+
     
     
     

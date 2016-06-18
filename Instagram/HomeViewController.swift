@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
+
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
@@ -102,6 +103,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return UITableViewAutomaticDimension
     }
     
+    //ネットから
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // セルをタップされたら何もせずに選択状態を解除する
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -166,6 +171,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         performSegueWithIdentifier("commentSegue", sender: nil)
 
+        
+        
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
@@ -183,6 +190,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
         // 他の画面から segue を使って戻ってきた時に呼ばれる
+        print("あんわいんど")
     }
     
     

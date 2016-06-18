@@ -65,9 +65,9 @@ class PostTableViewCell: UITableViewCell {
                     commentLabel.text = "コメント\(postData.commentUser.count)件\n" + postData.commentUser[number] + "：" + postData.commentText[number]
                 } else {
                 commentLabel.text = "\(commentLabel.text!)" + "\n" + postData.commentUser[number] + "：" + postData.commentText[number]
-                    print("\(commentLabel.text)ここだよ")}
+}
             }
-        }
+        }else {commentLabel.text = ""}
         
         super.layoutSubviews()
     }
